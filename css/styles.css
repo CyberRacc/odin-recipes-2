@@ -16,6 +16,8 @@ body {
     display: flex;
     flex-direction: column; /* Added */
     min-height: 100vh; /* Added */
+    padding-bottom: 50px; /* Add this, equal to the height of the footer */
+
 }
 
 header {
@@ -55,7 +57,7 @@ a:hover {
 }
 
 
-header a:active {
+a:active {
     box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.2), inset -2px -2px 4px rgba(255, 255, 255, 0.2);
 }
 
@@ -73,15 +75,15 @@ nav ul li {
     padding: 0 20px 0 20px;
 }
 
-/* Container */
 #content {
-    flex-grow: 1; /* Added */
+    padding-top: 150px; /* Add this, equal to the height of the header */
+    padding-bottom: 10px; /* Add this, equal to the height of the footer */
+    flex-grow: 1;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 80%;
     margin: 0 auto;
-    margin-top: 32px;
     overflow: scroll;
     flex-direction: column;
 }
@@ -95,13 +97,27 @@ nav ul li {
     box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.2), -8px -8px 16px rgba(255, 255, 255, 0.2);
 }
 
-#welcome, #about {
+#contact, #contact-form {
     background: #222;
     color: #fff;
     padding: 100px;
     margin: 20px 0;
     border-radius: 8px;
     box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.2), -8px -8px 16px rgba(255, 255, 255, 0.2);
+}
+
+#welcome, #about {
+    background: #222;
+    color: #fff;
+    padding: 50px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.2), -8px -8px 16px rgba(255, 255, 255, 0.2);
+    width: 1000px;
+}
+
+#welcome h2, #about h2 {
+    margin-bottom: 20px;
 }
 
 #welcome a {
@@ -139,6 +155,13 @@ nav ul li {
     transition: box-shadow 0.3s ease;
     width: calc(200px + 80px); /* Keep this as is */
     box-sizing: border-box; /* Add this to include padding and border in the element's total width */
+    display: flex;
+    flex-direction: column;
+}
+
+.recipe-card a {
+    margin-top: auto;
+    align-self: flex-end;
 }
 
 .recipe-card:hover {
