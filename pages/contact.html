@@ -8,7 +8,7 @@
     </head>
     <body>
         <header>
-            <h1><a href="index.html">Odin Recipes</a></h1>
+            <h1>Odin Recipes</h1>
             <nav>
                 <ul>
                     <li><a href="/index.html">Home</a></li>
@@ -23,7 +23,7 @@
             <div id="contact">
                 <h2>Contact Odin Recipes</h2>
                 <p>Thank you for your interest in Odin Recipes! If you have any questions, feedback, or inquiries, please feel free to reach out to us using the contact form below.</p>
-                <form action="/send-message" method="POST">
+                <form action="/send-message" method="POST" onsubmit="event.preventDefault()">
                     <label for="name">Name:</label>
                     <input type="text" id="name" name="name" required>
                     <label for="email">Email:</label>
